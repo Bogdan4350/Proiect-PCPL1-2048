@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.Return = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +48,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.Guide = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Return
@@ -54,7 +59,7 @@
             this.Return.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Return.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Return.ForeColor = System.Drawing.Color.Blue;
-            this.Return.Location = new System.Drawing.Point(-8, 617);
+            this.Return.Location = new System.Drawing.Point(-8, 749);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(132, 63);
             this.Return.TabIndex = 1;
@@ -64,11 +69,15 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Font = new System.Drawing.Font("Swis721 Blk BT", 25.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(151, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 115);
             this.label1.TabIndex = 2;
+            this.label1.Text = "2";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -153,11 +162,15 @@
             // 
             // label12
             // 
-            this.label12.BackColor = System.Drawing.Color.Silver;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label12.Font = new System.Drawing.Font("Swis721 Blk BT", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(270, 367);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(113, 115);
             this.label12.TabIndex = 13;
+            this.label12.Text = "4";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -215,12 +228,63 @@
             this.label17.Text = "0";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // Guide
+            // 
+            this.Guide.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Guide.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Guide.Location = new System.Drawing.Point(151, 630);
+            this.Guide.Name = "Guide";
+            this.Guide.Size = new System.Drawing.Size(417, 114);
+            this.Guide.TabIndex = 20;
+            this.Guide.Text = resources.GetString("Guide.Text");
+            this.Guide.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label18.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label18.Location = new System.Drawing.Point(0, 216);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(112, 62);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "You Win";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.Visible = false;
+            // 
+            // label19
+            // 
+            this.label19.Location = new System.Drawing.Point(0, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(100, 23);
+            this.label19.TabIndex = 0;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Red;
+            this.label20.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label20.Location = new System.Drawing.Point(0, 294);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(112, 62);
+            this.label20.TabIndex = 22;
+            this.label20.Text = "You Lose";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label20.Visible = false;
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 671);
+            this.CancelButton = this.Return;
+            this.ClientSize = new System.Drawing.Size(720, 596);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.Guide);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.label16);
@@ -242,6 +306,7 @@
             this.Controls.Add(this.Return);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2048";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
@@ -269,5 +334,9 @@
         private Label label16;
         private Label Score;
         private Label label17;
+        private Label Guide;
+        private Label label18;
+        private Label label19;
+        private Label label20;
     }
 }

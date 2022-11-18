@@ -9,9 +9,9 @@ namespace Proiect_PCPL1_2048
         {
             InitializeComponent();
         }
-
+        
         private void START_Click(object sender, EventArgs e)
-        {
+        { 
             this.Hide();
             var form3 = new Form3();
             form3.Show();
@@ -27,7 +27,8 @@ namespace Proiect_PCPL1_2048
         }
 
         private void CREDITS_Click(object sender, EventArgs e)
-        {   this.Hide();
+        {  
+            this.Hide();
             var form4 = new Form4();
             form4.Show();
 
@@ -41,6 +42,11 @@ namespace Proiect_PCPL1_2048
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void EXIT_click(object sender, EventArgs e)
+        {
+            this.Close();
+           
         }
     }
 

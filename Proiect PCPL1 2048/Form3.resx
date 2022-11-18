@@ -57,4 +57,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Guide.Text" xml:space="preserve">
+    <value>How to play: Use the arrow keys to move the tiles. 
+Tiles with the same number merge into one when 
+they touch. Add them up to 2048 to win the game.
+Lose the game if all the tiles have a number and 
+you can't do any move.
+</value>
+  </data>
 </root>

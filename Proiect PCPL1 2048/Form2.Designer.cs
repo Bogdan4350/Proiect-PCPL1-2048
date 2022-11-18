@@ -52,6 +52,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Return);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Setari";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

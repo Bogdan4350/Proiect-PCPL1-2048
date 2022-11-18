@@ -32,6 +32,7 @@
             this.CREDITS = new System.Windows.Forms.Button();
             this.SETTINGS = new System.Windows.Forms.Button();
             this.Titlu = new System.Windows.Forms.Label();
+            this.EXIT = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // START
@@ -86,17 +87,32 @@
             this.Titlu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Titlu.Click += new System.EventHandler(this.label1_Click);
             // 
+            // EXIT
+            // 
+            this.EXIT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EXIT.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EXIT.ForeColor = System.Drawing.Color.Red;
+            this.EXIT.Location = new System.Drawing.Point(349, 440);
+            this.EXIT.Name = "EXIT";
+            this.EXIT.Size = new System.Drawing.Size(121, 49);
+            this.EXIT.TabIndex = 5;
+            this.EXIT.Text = "EXIT";
+            this.EXIT.UseVisualStyleBackColor = true;
+            this.EXIT.Click += new System.EventHandler(this.EXIT_click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 501);
+            this.Controls.Add(this.EXIT);
             this.Controls.Add(this.Titlu);
             this.Controls.Add(this.SETTINGS);
             this.Controls.Add(this.CREDITS);
             this.Controls.Add(this.START);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2048 Aplicatie";
             this.Load += new System.EventHandler(this.Aplicatie_Load);
             this.ResumeLayout(false);
@@ -109,5 +125,6 @@
         private Button CREDITS;
         private Button SETTINGS;
         private Label Titlu;
+        private Button EXIT;
     }
 }

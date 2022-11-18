@@ -52,6 +52,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Return);
             this.Name = "Form4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Credite";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
