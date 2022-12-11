@@ -34,10 +34,8 @@ namespace Proiect_PCPL1_2048
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -50,6 +48,25 @@ namespace Proiect_PCPL1_2048
         }
 
         private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Score_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Score2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
         {
 
         }

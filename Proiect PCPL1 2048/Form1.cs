@@ -45,8 +45,9 @@ namespace Proiect_PCPL1_2048
         }
         private void EXIT_click(object sender, EventArgs e)
         {
-            this.Close();
-           
+            Application.Exit();
+
+
         }
     }
 

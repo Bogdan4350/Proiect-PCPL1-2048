@@ -47,7 +47,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.Score = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.Score2 = new System.Windows.Forms.Label();
             this.Guide = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -78,7 +78,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "2";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -91,7 +90,7 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(508, 117);
+            this.label3.Location = new System.Drawing.Point(389, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 115);
             this.label3.TabIndex = 4;
@@ -99,7 +98,7 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Silver;
-            this.label4.Location = new System.Drawing.Point(389, 117);
+            this.label4.Location = new System.Drawing.Point(508, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 115);
             this.label4.TabIndex = 5;
@@ -147,7 +146,7 @@
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(508, 367);
+            this.label10.Location = new System.Drawing.Point(270, 367);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(113, 115);
             this.label10.TabIndex = 11;
@@ -165,17 +164,18 @@
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label12.Font = new System.Drawing.Font("Swis721 Blk BT", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(270, 367);
+            this.label12.Location = new System.Drawing.Point(508, 367);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(113, 115);
             this.label12.TabIndex = 13;
             this.label12.Text = "4";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Silver;
-            this.label13.Location = new System.Drawing.Point(508, 494);
+            this.label13.Location = new System.Drawing.Point(151, 494);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(113, 115);
             this.label13.TabIndex = 14;
@@ -183,7 +183,7 @@
             // label14
             // 
             this.label14.BackColor = System.Drawing.Color.Silver;
-            this.label14.Location = new System.Drawing.Point(389, 494);
+            this.label14.Location = new System.Drawing.Point(270, 494);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 115);
             this.label14.TabIndex = 15;
@@ -191,7 +191,7 @@
             // label15
             // 
             this.label15.BackColor = System.Drawing.Color.Silver;
-            this.label15.Location = new System.Drawing.Point(270, 494);
+            this.label15.Location = new System.Drawing.Point(389, 494);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(113, 115);
             this.label15.TabIndex = 16;
@@ -199,10 +199,11 @@
             // label16
             // 
             this.label16.BackColor = System.Drawing.Color.Silver;
-            this.label16.Location = new System.Drawing.Point(151, 494);
+            this.label16.Location = new System.Drawing.Point(508, 494);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(113, 115);
             this.label16.TabIndex = 17;
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // Score
             // 
@@ -215,18 +216,19 @@
             this.Score.TabIndex = 18;
             this.Score.Text = "Score:";
             this.Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Score.Click += new System.EventHandler(this.Score_Click);
             // 
-            // label17
+            // Score2
             // 
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.label17.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(389, 9);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(100, 50);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "0";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Score2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Score2.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Score2.ForeColor = System.Drawing.Color.Black;
+            this.Score2.Location = new System.Drawing.Point(389, 9);
+            this.Score2.Name = "Score2";
+            this.Score2.Size = new System.Drawing.Size(100, 50);
+            this.Score2.TabIndex = 19;
+            this.Score2.Text = "0";
+            this.Score2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Guide
             // 
@@ -285,7 +287,7 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.Guide);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.Score2);
             this.Controls.Add(this.Score);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -333,7 +335,7 @@
         private Label label15;
         private Label label16;
         private Label Score;
-        private Label label17;
+        private Label Score2;
         private Label Guide;
         private Label label18;
         private Label label19;
