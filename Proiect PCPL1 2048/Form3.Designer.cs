@@ -59,7 +59,7 @@
             this.Return.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Return.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Return.ForeColor = System.Drawing.Color.Blue;
-            this.Return.Location = new System.Drawing.Point(-8, 749);
+            this.Return.Location = new System.Drawing.Point(-11, 756);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(132, 63);
             this.Return.TabIndex = 1;
@@ -69,14 +69,13 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("Swis721 Blk BT", 25.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(151, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 115);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "2";
+            this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -85,7 +84,9 @@
             this.label2.Location = new System.Drawing.Point(270, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 115);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 1;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -93,7 +94,8 @@
             this.label3.Location = new System.Drawing.Point(389, 117);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 115);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 3;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -101,7 +103,8 @@
             this.label4.Location = new System.Drawing.Point(508, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 115);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 2;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -109,7 +112,8 @@
             this.label5.Location = new System.Drawing.Point(151, 241);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 115);
-            this.label5.TabIndex = 6;
+            this.label5.TabIndex = 0;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -117,7 +121,8 @@
             this.label6.Location = new System.Drawing.Point(270, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 115);
-            this.label6.TabIndex = 7;
+            this.label6.TabIndex = 1;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -125,7 +130,8 @@
             this.label7.Location = new System.Drawing.Point(389, 241);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 115);
-            this.label7.TabIndex = 8;
+            this.label7.TabIndex = 3;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -133,7 +139,8 @@
             this.label8.Location = new System.Drawing.Point(508, 241);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 115);
-            this.label8.TabIndex = 9;
+            this.label8.TabIndex = 2;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -141,7 +148,8 @@
             this.label9.Location = new System.Drawing.Point(151, 367);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 115);
-            this.label9.TabIndex = 10;
+            this.label9.TabIndex = 0;
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -149,7 +157,8 @@
             this.label10.Location = new System.Drawing.Point(270, 367);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(113, 115);
-            this.label10.TabIndex = 11;
+            this.label10.TabIndex = 1;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -157,18 +166,18 @@
             this.label11.Location = new System.Drawing.Point(389, 367);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(113, 115);
-            this.label11.TabIndex = 12;
+            this.label11.TabIndex = 3;
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label12.Font = new System.Drawing.Font("Swis721 Blk BT", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.BackColor = System.Drawing.Color.Silver;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label12.Location = new System.Drawing.Point(508, 367);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(113, 115);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "4";
+            this.label12.TabIndex = 2;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
@@ -178,7 +187,8 @@
             this.label13.Location = new System.Drawing.Point(151, 494);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(113, 115);
-            this.label13.TabIndex = 14;
+            this.label13.TabIndex = 0;
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -186,7 +196,8 @@
             this.label14.Location = new System.Drawing.Point(270, 494);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 115);
-            this.label14.TabIndex = 15;
+            this.label14.TabIndex = 2;
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -194,7 +205,8 @@
             this.label15.Location = new System.Drawing.Point(389, 494);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(113, 115);
-            this.label15.TabIndex = 16;
+            this.label15.TabIndex = 3;
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
@@ -202,7 +214,8 @@
             this.label16.Location = new System.Drawing.Point(508, 494);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(113, 115);
-            this.label16.TabIndex = 17;
+            this.label16.TabIndex = 2;
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // Score
@@ -228,7 +241,7 @@
             this.Score2.Size = new System.Drawing.Size(100, 50);
             this.Score2.TabIndex = 19;
             this.Score2.Text = "0";
-            this.Score2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Score2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Guide
             // 
