@@ -15,8 +15,7 @@ namespace Proiect_PCPL1_2048
 {
     public partial class Form3 : Form
     {
-        Random RD = new Random();
-        bool DinNou=true;
+        Random RD = new Random();        
         static ArrayList linie=new ArrayList();
         public Form3()
         {
@@ -31,10 +30,10 @@ namespace Proiect_PCPL1_2048
             {label9,label10,label11,label12 },
             {label13,label14,label15,label16 }
             };
-            int i, j;
-            for(i = 0;i<4; i++)
+            
+            for(int i = 0;i<4; i++)
             {
-                for (j = 0; j < 4; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     if (joc[i, j].Text == "")
                     {
@@ -115,28 +114,29 @@ namespace Proiect_PCPL1_2048
             linie.Clear();
 
             Label[,] joc = {
-            {label1,label2,label3,label4 },
-            {label5,label6,label7,label8 },
-            {label9,label10,label11,label12 },
-            {label13,label14,label15,label16 }
+            {label1,label2,label3,label4},
+            {label5,label6,label7,label8},
+            {label9,label10,label11,label12},
+            {label13,label14,label15,label16}
             };
-            int i, j;
-            for (i = 0; i < 4; i++)
+
+            for (int i = 0; i < 4; i++)
             {
-                for (j = 0; j < 4; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     if (joc[i, j].Text == "")
                     {
                         linie.Add(i * 4 + j + 1);
 
                     }
+                }
+            }
                     if(linie.Count > 0)
                     {
 
                         int numara = int.Parse(linie[RD.Next(0, linie.Count - 1)].ToString());
-                        int i1, j1;
-                        i1 = (numara - 1) / 4;
-                        j1 = (numara - 1) - i1 * 4;
+                        int i1 = (numara - 1) / 4;
+                        int j1 = (numara - 1) - i1 * 4;
                         int linie2 = RD.Next(1, 10);
                         if (linie2 == 1 || linie2 == 2 || linie2 == 3 || linie2 == 4 || linie2 == 5 || linie2 == 6)
                         {
@@ -151,11 +151,111 @@ namespace Proiect_PCPL1_2048
                         
                     }
                     culori();
-                }
+                
 
-            }
+            
         }
-        
+        public void tastajos()
+        {
+            bool verifcecjos = true;
+            bool victorie1 = false;
+            bool numarnou = false;
+            Label[,] joc = {
+            {label1,label2,label3,label4 },
+            {label5,label6,label7,label8 },
+            {label9,label10,label11,label12 },
+            {label13,label14,label15,label16 }
+            };
+            for (int i = 0; i < 4; i++)
+            {
+                int total;
+                total = 0;
+                for (int j = 0; j < 4; j++)
+                {
+                    for (int k = j + 1; k < 4; k++)
+                    {
+                        if (joc[k, i].Text != "")
+                        {
+                            if (joc[k, i].Text == joc[j, i].Text)
+                            {
+                                victorie1 = true;
+                            }
+                            break;
+                        }
+                    }
+                    if (joc[j, i].Text == "")
+                    {
+                        total++;
+                    }
+                    else
+                    {
+                        for (int m = j; m >= 0; m--)
+                        {
+                            if (joc[m, i].Text == "")
+                            {
+                                numarnou = true;
+                                break;
+                            }
+                        }
+                        if (j + 1 < 4)
+                        {
+
+                            bool numarextra = true;
+                            for (int k = j + 1; k < 4; k++)
+                            {
+                                if (joc[k, i].Text != "")
+                                {
+                                    if (joc[j, i].Text == joc[k, i].Text)
+                                    {
+                                        verifcecjos = false;
+                                        Score2.Text = (int.Parse(Score2.Text) + int.Parse(joc[j, i].Text) * 2).ToString();
+                                        numarnou = true;
+                                        numarextra = false;
+                                        joc[j, i].Text = (int.Parse(joc[j, i].Text) * 2).ToString();
+                                        if (total != 0)
+                                        {
+                                            joc[j - total, i].Text = joc[j, i].Text;
+                                            joc[j, i].Text = "";
+
+                                        }
+                                        joc[k, i].Text = "";
+                                        break;
+                                       
+                                    }
+                                    break;
+                                }
+                            }
+                            if (numarextra == true && total != 0)
+                            {
+                                verifcecjos = false;
+                                joc[j - total, i].Text = joc[j, i].Text;
+                                joc[j, i].Text = "";
+
+                            }
+
+                        }
+                        else
+                        {
+                            if (total != 0)
+                            {
+                                verifcecjos = false;
+                                joc[j - total, i].Text = joc[j, i].Text;
+                                joc[j, i].Text = "";
+
+                            }
+
+                        }
+
+                    }
+                
+                }
+            }
+            if (numarnou == true)
+            {
+                produnumere();
+            }
+            
+        }
 
         private void Form3_Load(object sender, EventArgs e)
         {produnumere();
@@ -163,6 +263,8 @@ namespace Proiect_PCPL1_2048
             produnumere();
 
         }
+        
+        
         private void Return_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -184,10 +286,7 @@ namespace Proiect_PCPL1_2048
 
         }
 
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label12_Click(object sender, EventArgs e)
         {
@@ -212,5 +311,16 @@ namespace Proiect_PCPL1_2048
         {
 
         }
+
+        private void joc_incheiat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
