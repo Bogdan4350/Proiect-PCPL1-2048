@@ -50,9 +50,12 @@
             this.Score2 = new System.Windows.Forms.Label();
             this.Guide = new System.Windows.Forms.Label();
             this.Iesire = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.Joc_Incheiat = new System.Windows.Forms.Label();
             this.Joc_nou = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.OptiuniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jocNouToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Return
@@ -64,7 +67,7 @@
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(132, 63);
             this.Return.TabIndex = 1;
-            this.Return.Text = "Return";
+            this.Return.Text = "Inapoi";
             this.Return.UseVisualStyleBackColor = false;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
@@ -239,7 +242,7 @@
             this.Score.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Score.Font = new System.Drawing.Font("Broadway", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Score.ForeColor = System.Drawing.Color.Black;
-            this.Score.Location = new System.Drawing.Point(283, 9);
+            this.Score.Location = new System.Drawing.Point(283, 28);
             this.Score.Name = "Score";
             this.Score.Size = new System.Drawing.Size(100, 50);
             this.Score.TabIndex = 18;
@@ -252,7 +255,7 @@
             this.Score2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Score2.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Score2.ForeColor = System.Drawing.Color.Black;
-            this.Score2.Location = new System.Drawing.Point(389, 9);
+            this.Score2.Location = new System.Drawing.Point(389, 28);
             this.Score2.Name = "Score2";
             this.Score2.Size = new System.Drawing.Size(100, 50);
             this.Score2.TabIndex = 19;
@@ -261,6 +264,7 @@
             // 
             // Guide
             // 
+            this.Guide.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Guide.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Guide.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Guide.Location = new System.Drawing.Point(151, 630);
@@ -282,13 +286,6 @@
             this.Iesire.Text = "Iesire";
             this.Iesire.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Iesire.Visible = false;
-            // 
-            // label19
-            // 
-            this.label19.Location = new System.Drawing.Point(0, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(100, 23);
-            this.label19.TabIndex = 0;
             // 
             // Joc_Incheiat
             // 
@@ -317,6 +314,33 @@
             this.Joc_nou.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Joc_nou.Visible = false;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OptiuniToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(699, 28);
+            this.menuStrip1.TabIndex = 24;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // OptiuniToolStripMenuItem
+            // 
+            this.OptiuniToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jocNouToolStripMenuItem1});
+            this.OptiuniToolStripMenuItem.Name = "OptiuniToolStripMenuItem";
+            this.OptiuniToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.OptiuniToolStripMenuItem.Text = "Optiuni";
+            this.OptiuniToolStripMenuItem.Click += new System.EventHandler(this.OptiuniToolStripMenuItem_Click);
+            // 
+            // jocNouToolStripMenuItem1
+            // 
+            this.jocNouToolStripMenuItem1.Name = "jocNouToolStripMenuItem1";
+            this.jocNouToolStripMenuItem1.Size = new System.Drawing.Size(145, 26);
+            this.jocNouToolStripMenuItem1.Text = "Joc Nou";
+            this.jocNouToolStripMenuItem1.Click += new System.EventHandler(this.jocNouToolStripMenuItem1_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -327,7 +351,6 @@
             this.ClientSize = new System.Drawing.Size(720, 596);
             this.Controls.Add(this.Joc_nou);
             this.Controls.Add(this.Joc_Incheiat);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.Iesire);
             this.Controls.Add(this.Guide);
             this.Controls.Add(this.Score2);
@@ -349,12 +372,17 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Return);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "2048";
             this.Load += new System.EventHandler(this.Form3_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -381,8 +409,10 @@
         private Label Score2;
         private Label Guide;
         private Label Iesire;
-        private Label label19;
         private Label Joc_Incheiat;
         private Label Joc_nou;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem OptiuniToolStripMenuItem;
+        private ToolStripMenuItem jocNouToolStripMenuItem1;
     }
 }

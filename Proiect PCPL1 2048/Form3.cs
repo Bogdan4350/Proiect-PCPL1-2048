@@ -15,7 +15,8 @@ namespace Proiect_PCPL1_2048
 {
     public partial class Form3 : Form
     {
-        Random RD = new Random();        
+        bool dinnou = true;
+        Random RD = new Random();
         static ArrayList linie=new ArrayList();
         public Form3()
         {
@@ -218,6 +219,40 @@ namespace Proiect_PCPL1_2048
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void jocNouToolStripMenuItem1_Click(object sender, EventArgs e)
+        {   
+            dinnou = true;
+            Score2.Text = "0";
+            Label[,] Game = 
+                {
+                {label1,label2,label3,label4},
+                {label5,label6,label7,label8},
+                {label9,label10,label11,label12},
+                {label13,label14,label15,label16}
+                };
+            
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Game[i, j].Visible = true;
+                    Game[i, j].Text = "";
+                }
+            }
+            produnumere();
+            produnumere();
+            produnumere();
+        }
+
+
+
+        private void OptiuniToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

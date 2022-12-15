@@ -44,7 +44,7 @@
             this.START.Name = "START";
             this.START.Size = new System.Drawing.Size(121, 59);
             this.START.TabIndex = 0;
-            this.START.Text = "START GAME";
+            this.START.Text = "JOC NOU";
             this.START.UseVisualStyleBackColor = true;
             this.START.Click += new System.EventHandler(this.START_Click);
             // 
@@ -57,7 +57,7 @@
             this.CREDITS.Name = "CREDITS";
             this.CREDITS.Size = new System.Drawing.Size(121, 49);
             this.CREDITS.TabIndex = 1;
-            this.CREDITS.Text = "CREDITS";
+            this.CREDITS.Text = "CREDITE";
             this.CREDITS.UseVisualStyleBackColor = true;
             this.CREDITS.Click += new System.EventHandler(this.CREDITS_Click);
             // 
@@ -70,7 +70,7 @@
             this.SETTINGS.Name = "SETTINGS";
             this.SETTINGS.Size = new System.Drawing.Size(121, 59);
             this.SETTINGS.TabIndex = 2;
-            this.SETTINGS.Text = "SETTINGS";
+            this.SETTINGS.Text = "ISTORIC";
             this.SETTINGS.UseVisualStyleBackColor = true;
             this.SETTINGS.Click += new System.EventHandler(this.SETTINGS_Click);
             // 
