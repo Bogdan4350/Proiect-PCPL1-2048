@@ -15,35 +15,35 @@ namespace Proiect_PCPL1_2048
 {
     public partial class Form3 : Form
     {
-        bool dinnou = true;
-        Random RD = new Random();
-        static ArrayList linie=new ArrayList();
+        bool dinnou = true;//folosit pentru a reincepe jocul
+        Random RD = new Random();//folosit pentru a da numere la inceputul jocului aleator
+        static ArrayList linie=new ArrayList();//folosit pentru a se putea interactiona cu cele 16 patrate
         public Form3()
         {
             InitializeComponent();
 
         }
-        public void culori()
+        public void culori()//folosit pentru stabilirea culorilor
         {
             Label[,] joc = {
             {label1,label2,label3,label4 },
             {label5,label6,label7,label8 },
             {label9,label10,label11,label12 },
             {label13,label14,label15,label16 }
-            };
+            };//recunoasterea celor 16 patratele
             
-            for(int i = 0;i<4; i++)
+            for(int i = 0;i<4; i++)//declarare matrice pt 1
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < 4; j++)//declarare matrice pt 2
                 {
-                    if (joc[i, j].Text == "")
+                    if (joc[i, j].Text == "")//stabilire culoare pentru cand nu este nici un numar in patrat
                     {
-                        joc[i, j].BackColor = System.Drawing.Color.MediumSeaGreen;
+                        joc[i, j].BackColor = System.Drawing.Color.MediumSeaGreen;//stabilirea culorii fundalului
                     }
                     if (joc[i, j].Text == "2")
                     {
                         joc[i, j].BackColor = System.Drawing.Color.Turquoise;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
+                        joc[i, j].ForeColor = System.Drawing.Color.Black;//stabilirea culorii fontului
 
                     }
                     if (joc[i, j].Text == "4")
@@ -110,7 +110,7 @@ namespace Proiect_PCPL1_2048
 
             }
         }
-        public void produnumere()
+        public void produnumere()//functie folosita pentru a produce numere
         {
             linie.Clear();
 
@@ -119,15 +119,15 @@ namespace Proiect_PCPL1_2048
             {label5,label6,label7,label8},
             {label9,label10,label11,label12},
             {label13,label14,label15,label16}
-            };
+            };//recunoasterea celor 16 patratele
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++)//declararea matricii pt 1
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < 4; j++)// declararea matricii pt 2
                 {
-                    if (joc[i, j].Text == "")
+                    if (joc[i, j].Text == "")//conditie de trecere
                     {
-                        linie.Add(i * 4 + j + 1);
+                        linie.Add(i * 4 + j + 1);//trecerea prin fiecare linie
 
                     }
                 }
@@ -135,18 +135,17 @@ namespace Proiect_PCPL1_2048
                     if(linie.Count > 0)
                     {
 
-                        int numara = int.Parse(linie[RD.Next(0, linie.Count - 1)].ToString());
-                        int i1 = (numara - 1) / 4;
-                        int j1 = (numara - 1) - i1 * 4;
-                        int linie2 = RD.Next(1, 10);
-                        if (linie2 == 1 || linie2 == 2 || linie2 == 3 || linie2 == 4 || linie2 == 5 || linie2 == 6)
+                        int numara = int.Parse(linie[RD.Next(0, linie.Count - 1)].ToString());//transformarea numerelor din string in echivalent de 32 de biti
+                        int i1 = (numara - 1) / 4;//numarare pt 1
+                        int j1 = (numara - 1) - i1 * 4;//numarare pt 2
+                        int linie2 = RD.Next(1, 10);//stabilirea valorilor aleatorii
+                        if (linie2 == 1 || linie2 == 2 || linie2 == 3 || linie2 == 4 || linie2 == 5 || linie2 == 6)//conditie de asignare a valorilor
                         {
-                            joc[i1, j1].Text = "2";
+                            joc[i1, j1].Text = "2";//asignarea valorii 2 
                         }
                         else
                         {
-                            joc[i1, j1].Text = "4";
-
+                            joc[i1, j1].Text = "4";//asignarea valorii 4 
                         }    
 
                         
@@ -159,84 +158,32 @@ namespace Proiect_PCPL1_2048
         
 
         private void Form3_Load(object sender, EventArgs e)
-        {produnumere();
+        {   
+            produnumere();//repetare functie de 3 ori 
             produnumere();
             produnumere();
 
         }
         
         
-        private void Return_Click(object sender, EventArgs e)
+        private void Return_Click(object sender, EventArgs e)//functie pentru intoarcerea inapoi la pagina principala
         {
             this.Close();
             Form1 newform = new Form1();
             newform.Show();
 
         }
-
-        
-        
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Score_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Score2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void joc_incheiat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void jocNouToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void jocNouToolStripMenuItem1_Click(object sender, EventArgs e)//folosit pentru a incepe alt joc
         {   
-            dinnou = true;
-            Score2.Text = "0";
-            Label[,] Game = 
-                {
+            dinnou = true;//conditia de joc nou
+            Score2.Text = "0";//resetarea scorului
+            Label[,] Game = {
                 {label1,label2,label3,label4},
                 {label5,label6,label7,label8},
                 {label9,label10,label11,label12},
                 {label13,label14,label15,label16}
-                };
-            
+                };//recunoasterea celor 16 patratele
+
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)

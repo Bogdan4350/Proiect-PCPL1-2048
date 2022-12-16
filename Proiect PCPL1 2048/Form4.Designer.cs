@@ -40,7 +40,7 @@
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(130, 63);
             this.Return.TabIndex = 2;
-            this.Return.Text = "Return";
+            this.Return.Text = "Inapoi";
             this.Return.UseVisualStyleBackColor = false;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 

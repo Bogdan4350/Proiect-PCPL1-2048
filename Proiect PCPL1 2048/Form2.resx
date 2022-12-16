@@ -57,4 +57,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>              2048 este un joc video de tip puzzle, scris de dezvoltatorul web italian Gabriele Cirulli și publicat pe GitHub. Obiectivul jocului este de a glisa plăcile numerotate pe o grilă pentru a le combina și pentru a crea o tăbliță cu numărul 2048; cu toate acestea, se poate continua să se joace jocul după atingerea obiectivului, creând plăci cu numere mai mari.                          
+              Inițial, jocul a fost scris în JavaScript și CSS în decursul unui weekend și a fost lansat la 9 martie 2014 ca software gratuit și open-source supus licenței MIT. Versiunile pentru iOS și Android au urmat în mai 2014.
+              2048 s-a dorit a fi o versiune îmbunătățită a altor două jocuri, ambele fiind clone ale jocului pentru iOS Threes lansat cu o lună mai devreme. Cirulli însuși a descris 2048 ca fiind "similar din punct de vedere conceptual" cu Threes. 
+              Lansarea lui 2048 a dus la apariția rapidă a numeroase jocuri similare, asemănătoare cu avalanșa de variații ale lui Flappy Bird din 2013. Jocul a primit recenzii în general pozitive din partea criticilor, fiind descris ca fiind "viral" și "captivant". 
+</value>
+  </data>
 </root>

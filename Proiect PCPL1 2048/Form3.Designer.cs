@@ -49,21 +49,22 @@
             this.Score = new System.Windows.Forms.Label();
             this.Score2 = new System.Windows.Forms.Label();
             this.Guide = new System.Windows.Forms.Label();
-            this.Iesire = new System.Windows.Forms.Label();
             this.Joc_Incheiat = new System.Windows.Forms.Label();
-            this.Joc_nou = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.OptiuniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jocNouToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Joc_Nou = new System.Windows.Forms.Button();
+            this.Iesire = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Return
             // 
             this.Return.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Return.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Return.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Return.ForeColor = System.Drawing.Color.Blue;
-            this.Return.Location = new System.Drawing.Point(-8, 773);
+            this.Return.Location = new System.Drawing.Point(-8, 780);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(132, 63);
             this.Return.TabIndex = 1;
@@ -74,7 +75,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(151, 117);
             this.label1.Name = "label1";
@@ -91,7 +92,6 @@
             this.label2.Size = new System.Drawing.Size(113, 115);
             this.label2.TabIndex = 1;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -172,7 +172,6 @@
             this.label10.Size = new System.Drawing.Size(113, 115);
             this.label10.TabIndex = 1;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -194,7 +193,6 @@
             this.label12.Size = new System.Drawing.Size(113, 115);
             this.label12.TabIndex = 2;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -235,7 +233,6 @@
             this.label16.Size = new System.Drawing.Size(113, 115);
             this.label16.TabIndex = 2;
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // Score
             // 
@@ -248,7 +245,6 @@
             this.Score.TabIndex = 18;
             this.Score.Text = "Scor:";
             this.Score.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Score.Click += new System.EventHandler(this.Score_Click);
             // 
             // Score2
             // 
@@ -265,54 +261,26 @@
             // Guide
             // 
             this.Guide.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Guide.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Guide.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Guide.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Guide.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Guide.Location = new System.Drawing.Point(151, 630);
             this.Guide.Name = "Guide";
-            this.Guide.Size = new System.Drawing.Size(417, 114);
+            this.Guide.Size = new System.Drawing.Size(417, 135);
             this.Guide.TabIndex = 20;
             this.Guide.Text = resources.GetString("Guide.Text");
-            this.Guide.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // Iesire
-            // 
-            this.Iesire.BackColor = System.Drawing.Color.Crimson;
-            this.Iesire.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Iesire.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Iesire.Location = new System.Drawing.Point(268, 432);
-            this.Iesire.Name = "Iesire";
-            this.Iesire.Size = new System.Drawing.Size(234, 62);
-            this.Iesire.TabIndex = 21;
-            this.Iesire.Text = "Iesire";
-            this.Iesire.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Iesire.Visible = false;
             // 
             // Joc_Incheiat
             // 
             this.Joc_Incheiat.BackColor = System.Drawing.SystemColors.Desktop;
             this.Joc_Incheiat.Font = new System.Drawing.Font("Cooper Black", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Joc_Incheiat.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Joc_Incheiat.Location = new System.Drawing.Point(204, 162);
+            this.Joc_Incheiat.Location = new System.Drawing.Point(204, 165);
             this.Joc_Incheiat.Name = "Joc_Incheiat";
             this.Joc_Incheiat.Size = new System.Drawing.Size(377, 160);
             this.Joc_Incheiat.TabIndex = 22;
             this.Joc_Incheiat.Text = "Joc Incheiat";
             this.Joc_Incheiat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Joc_Incheiat.Visible = false;
-            this.Joc_Incheiat.Click += new System.EventHandler(this.joc_incheiat_Click);
-            // 
-            // Joc_nou
-            // 
-            this.Joc_nou.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Joc_nou.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Joc_nou.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.Joc_nou.Location = new System.Drawing.Point(268, 356);
-            this.Joc_nou.Name = "Joc_nou";
-            this.Joc_nou.Size = new System.Drawing.Size(234, 62);
-            this.Joc_nou.TabIndex = 23;
-            this.Joc_nou.Text = "Joc Nou";
-            this.Joc_nou.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Joc_nou.Visible = false;
             // 
             // menuStrip1
             // 
@@ -341,6 +309,34 @@
             this.jocNouToolStripMenuItem1.Text = "Joc Nou";
             this.jocNouToolStripMenuItem1.Click += new System.EventHandler(this.jocNouToolStripMenuItem1_Click);
             // 
+            // Joc_Nou
+            // 
+            this.Joc_Nou.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Joc_Nou.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Joc_Nou.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Joc_Nou.ForeColor = System.Drawing.Color.Green;
+            this.Joc_Nou.Location = new System.Drawing.Point(268, 367);
+            this.Joc_Nou.Name = "Joc_Nou";
+            this.Joc_Nou.Size = new System.Drawing.Size(234, 62);
+            this.Joc_Nou.TabIndex = 25;
+            this.Joc_Nou.Text = "Joc Nou";
+            this.Joc_Nou.UseVisualStyleBackColor = false;
+            this.Joc_Nou.Visible = false;
+            // 
+            // Iesire
+            // 
+            this.Iesire.BackColor = System.Drawing.Color.Crimson;
+            this.Iesire.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Iesire.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Iesire.ForeColor = System.Drawing.Color.Brown;
+            this.Iesire.Location = new System.Drawing.Point(268, 429);
+            this.Iesire.Name = "Iesire";
+            this.Iesire.Size = new System.Drawing.Size(234, 62);
+            this.Iesire.TabIndex = 26;
+            this.Iesire.Text = "Iesire";
+            this.Iesire.UseVisualStyleBackColor = false;
+            this.Iesire.Visible = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -349,9 +345,9 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.CancelButton = this.Return;
             this.ClientSize = new System.Drawing.Size(720, 596);
-            this.Controls.Add(this.Joc_nou);
-            this.Controls.Add(this.Joc_Incheiat);
             this.Controls.Add(this.Iesire);
+            this.Controls.Add(this.Joc_Nou);
+            this.Controls.Add(this.Joc_Incheiat);
             this.Controls.Add(this.Guide);
             this.Controls.Add(this.Score2);
             this.Controls.Add(this.Score);
@@ -408,11 +404,11 @@
         private Label Score;
         private Label Score2;
         private Label Guide;
-        private Label Iesire;
         private Label Joc_Incheiat;
-        private Label Joc_nou;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem OptiuniToolStripMenuItem;
         private ToolStripMenuItem jocNouToolStripMenuItem1;
+        private Button Joc_Nou;
+        private Button Iesire;
     }
 }

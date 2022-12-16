@@ -96,7 +96,7 @@
             this.EXIT.Name = "EXIT";
             this.EXIT.Size = new System.Drawing.Size(121, 49);
             this.EXIT.TabIndex = 5;
-            this.EXIT.Text = "EXIT";
+            this.EXIT.Text = "IESIRE";
             this.EXIT.UseVisualStyleBackColor = true;
             this.EXIT.Click += new System.EventHandler(this.EXIT_click);
             // 
