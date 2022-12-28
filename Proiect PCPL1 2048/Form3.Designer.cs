@@ -64,7 +64,7 @@
             this.Return.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Return.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Return.ForeColor = System.Drawing.Color.Blue;
-            this.Return.Location = new System.Drawing.Point(-8, 780);
+            this.Return.Location = new System.Drawing.Point(-5, 777);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(132, 63);
             this.Return.TabIndex = 1;

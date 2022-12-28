@@ -106,6 +106,18 @@ namespace Proiect_PCPL1_2048
                         joc[i, j].ForeColor = System.Drawing.Color.Black;
 
                     }
+                    if (joc[i, j].Text == "4096")
+                    {
+                        joc[i, j].BackColor = System.Drawing.Color.Magenta;
+                        joc[i, j].ForeColor = System.Drawing.Color.Black;
+
+                    }
+                    if (joc[i, j].Text == "8192")
+                    {
+                        joc[i, j].BackColor = System.Drawing.Color.MediumAquamarine;
+                        joc[i, j].ForeColor = System.Drawing.Color.Black;
+
+                    }
                 }
 
             }
