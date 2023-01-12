@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Return = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Return
@@ -44,12 +45,26 @@
             this.Return.UseVisualStyleBackColor = false;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(204, 122);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(356, 231);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Proiect realizat de: \r\nAndries Bogdan\r\nAldulea Ana-Alexandra \r\nBurlacu Bogdan-Mar" +
+    "ian\r\nPentru Proiect PCPL Profilul ETTI\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Return);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -62,5 +77,6 @@
         #endregion
 
         private Button Return;
+        private Label label1;
     }
 }

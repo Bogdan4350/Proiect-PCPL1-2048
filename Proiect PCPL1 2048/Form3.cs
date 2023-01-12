@@ -15,165 +15,158 @@ namespace Proiect_PCPL1_2048
 {
     public partial class Form3 : Form
     {
-        bool dinnou = true;//folosit pentru a reincepe jocul
-        Random RD = new Random();//folosit pentru a da numere la inceputul jocului aleator
-        static ArrayList linie=new ArrayList();//folosit pentru a se putea interactiona cu cele 16 patrate
+        private Game game;
         public Form3()
         {
             InitializeComponent();
 
+            game = new Game();//initializare joc
+
+            game.GameBoardModified += DrawGameBoard;//modificare tabla
+            game.GameOver += GameOver;//verificare joc terminat
+
+            game.Start();//inceputul jocului
         }
-        public void culori()//folosit pentru stabilirea culorilor
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)//procesare comenzi de tasta
         {
-            Label[,] joc = {
-            {label1,label2,label3,label4 },
-            {label5,label6,label7,label8 },
-            {label9,label10,label11,label12 },
-            {label13,label14,label15,label16 }
-            };//recunoasterea celor 16 patratele
-            
-            for(int i = 0;i<4; i++)//declarare matrice pt 1
+            if (keyData == Keys.Up)//tasta sus
             {
-                for (int j = 0; j < 4; j++)//declarare matrice pt 2
-                {
-                    if (joc[i, j].Text == "")//stabilire culoare pentru cand nu este nici un numar in patrat
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.MediumSeaGreen;//stabilirea culorii fundalului
-                    }
-                    if (joc[i, j].Text == "2")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Turquoise;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;//stabilirea culorii fontului
+                game.Move(Direction.UP);
+            }
 
-                    }
-                    if (joc[i, j].Text == "4")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Azure;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
+            if (keyData == Keys.Down)//tasta jost
+            {
+                game.Move(Direction.DOWN);
+            }
 
-                    }
-                    if (joc[i, j].Text == "8")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Beige;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
+            if (keyData == Keys.Left)//tasta stanga
+            {
+                game.Move(Direction.LEFT);
+            }
 
-                    }
-                    if (joc[i, j].Text == "16")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Coral;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
+            if (keyData == Keys.Right)//tasta dreapta
+            {
+                game.Move(Direction.RIGHT);
+            }
 
-                    }
-                    if (joc[i, j].Text == "32")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.DarkCyan;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "64")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Firebrick;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "128")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Goldenrod;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "256")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.HotPink;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "512")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Indigo;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "1024")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Khaki;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "2048")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Silver;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "4096")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.Magenta;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                    if (joc[i, j].Text == "8192")
-                    {
-                        joc[i, j].BackColor = System.Drawing.Color.MediumAquamarine;
-                        joc[i, j].ForeColor = System.Drawing.Color.Black;
-
-                    }
-                }
-
+            return base.ProcessCmdKey(ref msg, keyData);//incheiere mutare tastatura
+        }
+        private void GameOver(object sender, EventArgs e)
+        {
+            MessageBox.Show("Game Over!", "Game Over!", MessageBoxButtons.OK);//mesaj afisat cand jocul este terminat
+        }
+        private Color NumToColor(int num)
+        {
+            switch (num)//culori(cand numarul este o valoare exacta din case, culoarea patratului se schimba
+            {
+                case 0://Empty
+                    return Color.Gray;
+                case 2://1
+                    return Color.Turquoise;
+                case 4://2
+                    return Color.Azure;
+                case 8://3
+                    return Color.Beige;
+                case 16://4
+                    return Color.Coral;
+                case 32://5
+                    return Color.DarkCyan;
+                case 64://6
+                    return Color.Firebrick;
+                case 128://7
+                    return Color.Goldenrod;
+                case 256://8
+                    return Color.HotPink;
+                case 512://9
+                    return Color.Indigo;
+                case 1024://10
+                    return Color.Khaki;
+                case 2048://11
+                    return Color.Silver;
+                case 4096://12
+                    return Color.Magenta;
+                case 8192://13
+                    return Color.Aquamarine;
+                case 16384://14
+                    return Color.MediumAquamarine;
+                case 32768://15
+                    return Color.RebeccaPurple;
+                case 65536://16
+                    return Color.Red;
+                case 131072://17
+                    return Color.OrangeRed;
+                default:
+                    return base.BackColor;
             }
         }
-        public void produnumere()//functie folosita pentru a produce numere
+        private String NumToText(int num)//verificare daca este spatiu liber
         {
-            linie.Clear();
-
-            Label[,] joc = {
-            {label1,label2,label3,label4},
-            {label5,label6,label7,label8},
-            {label9,label10,label11,label12},
-            {label13,label14,label15,label16}
-            };//recunoasterea celor 16 patratele
-
-            for (int i = 0; i < 4; i++)//declararea matricii pt 1
+            if (num == 0)
             {
-                for (int j = 0; j < 4; j++)// declararea matricii pt 2
-                {
-                    if (joc[i, j].Text == "")//conditie de trecere
-                    {
-                        linie.Add(i * 4 + j + 1);//trecerea prin fiecare linie
-
-                    }
-                }
+                return "";
             }
-                    if(linie.Count > 0)
-                    {
-
-                        int numara = int.Parse(linie[RD.Next(0, linie.Count - 1)].ToString());//transformarea numerelor din string in echivalent de 32 de biti
-                        int i1 = (numara - 1) / 4;//numarare pt 1
-                        int j1 = (numara - 1) - i1 * 4;//numarare pt 2
-                        int linie2 = RD.Next(1, 10);//stabilirea valorilor aleatorii
-                        if (linie2 == 1 || linie2 == 2 || linie2 == 3 || linie2 == 4 || linie2 == 5 || linie2 == 6)//conditie de asignare a valorilor
-                        {
-                            joc[i1, j1].Text = "2";//asignarea valorii 2 
-                        }
-                        else
-                        {
-                            joc[i1, j1].Text = "4";//asignarea valorii 4 
-                        }    
-
-                        
-                    }
-                    culori();
-                
-
-            
+            else
+            {
+                return num.ToString();
+            }
         }
-        
+        private void DrawGameBoard(object sender, EventArgs e)//crearea spatiului de joc
+        {
+            int[,] gameBoard = (e as GameBoardStatus).gameBoard;//crearea tablei
+
+            label1.BackColor = NumToColor(gameBoard[0, 0]);//initializarea patratelelor in culoare
+            label1.Text = NumToText(gameBoard[0, 0]);//initializarea patratelelor in text
+
+            label2.BackColor = NumToColor(gameBoard[0, 1]);
+            label2.Text = NumToText(gameBoard[0, 1]);
+
+            label3.BackColor = NumToColor(gameBoard[0, 2]);
+            label3.Text = NumToText(gameBoard[0, 2]);
+
+            label4.BackColor = NumToColor(gameBoard[0, 3]);
+            label4.Text = NumToText(gameBoard[0, 3]);
+
+            label5.BackColor = NumToColor(gameBoard[1, 0]);
+            label5.Text = NumToText(gameBoard[1, 0]);
+
+            label6.BackColor = NumToColor(gameBoard[1, 1]);
+            label6.Text = NumToText(gameBoard[1, 1]);
+
+            label7.BackColor = NumToColor(gameBoard[1, 2]);
+            label7.Text = NumToText(gameBoard[1, 2]);
+
+            label8.BackColor = NumToColor(gameBoard[1, 3]);
+            label8.Text = NumToText(gameBoard[1, 3]);
+
+            label9.BackColor = NumToColor(gameBoard[2, 0]);
+            label9.Text = NumToText(gameBoard[2, 0]);
+
+            label10.BackColor = NumToColor(gameBoard[2, 1]);
+            label10.Text = NumToText(gameBoard[2, 1]);
+
+            label11.BackColor = NumToColor(gameBoard[2, 2]);
+            label11.Text = NumToText(gameBoard[2, 2]);
+
+            label12.BackColor = NumToColor(gameBoard[2, 3]);
+            label12.Text = NumToText(gameBoard[2, 3]);
+
+            label13.BackColor = NumToColor(gameBoard[3, 0]);
+            label13.Text = NumToText(gameBoard[3, 0]);
+
+            label14.BackColor = NumToColor(gameBoard[3, 1]);
+            label14.Text = NumToText(gameBoard[3, 1]);
+
+            label15.BackColor = NumToColor(gameBoard[3, 2]);
+            label15.Text = NumToText(gameBoard[3, 2]);
+
+            label16.BackColor = NumToColor(gameBoard[3, 3]);
+            label16.Text = NumToText(gameBoard[3, 3]);
+
+            Invalidate();//terminare creare tabla
+        }
 
         private void Form3_Load(object sender, EventArgs e)
         {   
-            produnumere();//repetare functie de 3 ori 
-            produnumere();
-            produnumere();
 
         }
         
@@ -186,32 +179,29 @@ namespace Proiect_PCPL1_2048
 
         }
         private void jocNouToolStripMenuItem1_Click(object sender, EventArgs e)//folosit pentru a incepe alt joc
-        {   
-            dinnou = true;//conditia de joc nou
-            Score2.Text = "0";//resetarea scorului
-            Label[,] Game = {
-                {label1,label2,label3,label4},
-                {label5,label6,label7,label8},
-                {label9,label10,label11,label12},
-                {label13,label14,label15,label16}
-                };//recunoasterea celor 16 patratele
-
-            for (int i = 0; i < 4; i++)
+        {
+            if (MessageBox.Show("începe un joc nou. Continuați?", "Joc nou", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                for (int j = 0; j < 4; j++)
-                {
-                    Game[i, j].Visible = true;
-                    Game[i, j].Text = "";
-                }
+                game = null;
+
+                game = new Game();
+
+                game.GameBoardModified += DrawGameBoard;
+                game.GameOver += GameOver;
+
+                game.Start();
             }
-            produnumere();
-            produnumere();
-            produnumere();
+
         }
 
 
 
         private void OptiuniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

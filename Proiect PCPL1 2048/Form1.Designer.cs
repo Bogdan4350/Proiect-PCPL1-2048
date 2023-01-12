@@ -106,6 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 501);
+            this.ControlBox = false;
             this.Controls.Add(this.EXIT);
             this.Controls.Add(this.Titlu);
             this.Controls.Add(this.SETTINGS);
